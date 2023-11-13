@@ -244,6 +244,12 @@ input::-webkit-inner-spin-button {
     padding: 25px 0px 25px;
 }
 
+.total-money {
+    color: white;
+    margin-right: 30px;
+    padding: 25px 0px 25px;
+}
+
 .player-expenses {
     color: white;
     margin-left: 30px;
