@@ -33,14 +33,17 @@
     font-size: 45px;
     font-weight: 600;
     text-transform: capitalize;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 .header-paragraph {
     color: white;
     width: 93%;
+    height: 30%;
     margin: 0px auto;
     text-align: justify;
+    padding-top: 20px;
+    line-height: 1.3em;
 
 }
 
