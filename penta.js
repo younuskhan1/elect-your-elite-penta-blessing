@@ -18,3 +18,17 @@ for (let btn of buttons) {
 
     })
 }
+
+function getInputValueById(inputFieldId) {
+    const inputField = document.getElementById(inputFieldId);
+    const inputValueString = inputField.value;
+    const inputValueNumber = parseFloat(inputValueString);
+    inputField.value = "";
+    return inputValueNumber;
+}
+
+document.getElementById("calculate-button").addEventListener("click", function () {
+    const perPlayerRate = getInputValueById("per-player-cost");
+    const costOfplayers = perPlayerRate * count;
+    document.getElementById("player-expenses").innerText = costOfplayers;
+})
