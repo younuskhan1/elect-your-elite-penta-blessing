@@ -41,8 +41,13 @@ function getTextElementById(textFieldId) {
 
 document.getElementById("calculate-button").addEventListener("click", function () {
     const perPlayerRate = getInputValueById("per-player-cost");
-    const costOfPlayers = perPlayerRate * validCount;
-    document.getElementById("player-expenses").innerText = costOfPlayers;
+    if (isNaN(perPlayerRate)) {
+        alert("Firstly, you have to select the players name afterthat insert an numeric value at the per player rate input field.")
+    } else {
+        const costOfPlayers = perPlayerRate * validCount;
+        const costOfPlayersDecimal = costOfPlayers.toFixed(2);
+        document.getElementById("player-expenses").innerText = costOfPlayersDecimal;
+    }
 })
 
 
@@ -51,6 +56,12 @@ document.getElementById("total-cost-button").addEventListener("click", function 
     const totalPlayersExpenses = getTextElementById("player-expenses");
     const managerExpenses = getInputValueById("manager-expenses");
     const coachExpenses = getInputValueById("coach-expenses");
-    const totalAmountCost = totalPlayersExpenses + managerExpenses + coachExpenses;
-    document.getElementById("total-expenses").innerText = totalAmountCost;
+    if (isNaN(totalPlayersExpenses) || isNaN(managerExpenses) || isNaN(coachExpenses)) {
+        alert("Firstly, you have to complete the task of above calculate button then You have to fill up the manager and coach input fields.")
+    } else {
+        const totalAmountCost = totalPlayersExpenses + managerExpenses + coachExpenses;
+        const totalAmountCostWithDecimal = totalAmountCost.toFixed(2);
+        document.getElementById("total-expenses").innerText = totalAmountCostWithDecimal;
+    }
+
 })
