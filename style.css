@@ -159,7 +159,7 @@
 }
 
 
-.button {
+.select-button {
     align-items: center;
     background-color: #015196;
     border: 2px solid #015196;
@@ -175,11 +175,16 @@
     transition: all .3s;
 }
 
-.button:hover {
+.select-button:hover {
     background-color: #3385ff;
     border-color: #3385ff;
     fill: #06f;
 }
+
+/*You can ask that why button[disabled] is used here? This question can arise because 
+button selector is used here for nothing but it works. The reason for it is the tagname 
+of all added addEventListener select-button class name. When I click the button on browser 
+then it find out the button tagname inside itself and then disable the button tag.*/
 
 button[disabled] {
     border: 1px solid #999999;
@@ -187,7 +192,6 @@ button[disabled] {
     color: black;
     cursor: not-allowed;
 }
-
 
 
 .calculation-button {

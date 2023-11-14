@@ -1,4 +1,4 @@
-const buttons = document.getElementsByClassName("button");
+const buttons = document.getElementsByClassName("select-button");
 for (let btn of buttons) {
     btn.addEventListener("click", function (event) {
         const target = event.target.parentNode.parentNode.childNodes[3].innerText;
