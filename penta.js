@@ -11,10 +11,11 @@ for (let btn of buttons) {
         if (count <= 5) {
             validCount = count;
             const li = document.createElement("li");
-            li.innerText = `${count}. ${targetPlayer}`;
+            li.innerText = `${validCount}. ${targetPlayer}`;
             li.classList.add("selected-player-name");
             selectedPlayerContainer.appendChild(li);
             const buttonDisable = event.target;
+            // console.log(buttonDisable);
             buttonDisable.setAttribute("disabled", true);
         } else {
             alert("You cannot add more than five players at this moment.");

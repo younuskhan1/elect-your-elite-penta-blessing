@@ -181,10 +181,24 @@
     fill: #06f;
 }
 
-/*You can ask that why button[disabled] is used here? This question can arise because 
+/*
+
+You can ask that why button[disabled] is used here? This question can arise because 
 button selector is used here for nothing but it works. The reason for it is the tagname 
 of all added addEventListener select-button class name. When I click the button on browser 
-then it find out the button tagname inside itself and then disable the button tag.*/
+then it find out the button tagname inside itself and then set the disabled attribute to 
+the button tag.
+
+In javascript file, I caught the button field/tag and added/set disabled attribute to that
+button tag and made it true.
+
+const buttonDisable = event.target;
+buttonDisable.setAttribute("disabled", true);
+
+console.log(buttonDisable);
+//<button class="select-button" disabled="true">SELECT</button>
+
+*/
 
 button[disabled] {
     border: 1px solid #999999;
