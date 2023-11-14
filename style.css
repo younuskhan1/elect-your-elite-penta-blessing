@@ -198,6 +198,8 @@ buttonDisable.setAttribute("disabled", true);
 console.log(buttonDisable);
 //<button class="select-button" disabled="true">SELECT</button>
 
+button[disabled] is applied on above button tag got from (event.target). 
+
 */
 
 button[disabled] {

@@ -64,5 +64,5 @@ document.getElementById("total-cost-button").addEventListener("click", function 
         const totalAmountCostWithDecimal = totalAmountCost.toFixed(2);
         document.getElementById("total-expenses").innerText = totalAmountCostWithDecimal;
     }
-
 })
+
