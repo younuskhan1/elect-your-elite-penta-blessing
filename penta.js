@@ -57,7 +57,7 @@ document.getElementById("total-cost-button").addEventListener("click", function 
     const managerExpenses = getInputValueById("manager-expenses");
     const coachExpenses = getInputValueById("coach-expenses");
     if (isNaN(totalPlayersExpenses) || isNaN(managerExpenses) || isNaN(coachExpenses)) {
-        alert("Firstly, you have to complete the task of above calculate button then You have to fill up the manager and coach input fields.")
+        alert("Firstly, you have to complete the task of above calculate button then You have to fill up the manager and coach input fields with numeric value.")
     } else {
         const totalAmountCost = totalPlayersExpenses + managerExpenses + coachExpenses;
         const totalAmountCostWithDecimal = totalAmountCost.toFixed(2);
